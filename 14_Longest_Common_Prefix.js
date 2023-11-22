@@ -24,3 +24,34 @@ Constraints:
 strs[i] consists of only lowercase English letters.
 */
 
+strs = ["flower","flow","flight"]
+
+var longestCommonPrefix = function(strs) {
+
+    console.log(strs)
+    if(!strs.length) {
+        return ""
+    } // Si el array esta vacio devuelve "" como respuesta, finalizando al ejecucion del codigo.
+
+    let palabraMasPequenaDelArray = Math.min(...strs.map((str) => str.length )) //Buscamos la palabra mas pequena del array y la convertimos a un numero. Para poder limitar la busqueda del prefijo.
+
+    console.log(palabraMasPequenaDelArray)
+
+    let prefijo = "" //Aqui almacenaremos la respuesta
+    for(let i = 0; i < palabraMasPequenaDelArray; i++) {
+
+console.log(i)
+
+if(strs[0][i] === strs[0][i]) {
+console.log(strs[0][i])
+}
+
+
+    }
+    
+
+    console.log(palabraMasPequenaDelArray)
+    
+};
+
+longestCommonPrefix(strs)

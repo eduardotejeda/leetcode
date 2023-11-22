@@ -1,6 +1,6 @@
 # leetcode
 
-Respuestas a los diferentes retos de LeetCode que he podido descifrar por mi cuenta.
+Respuestas en JavaScript a los diferentes retos de LeetCode que he podido descifrar por mi cuenta.
 
 ## Estructura
 
@@ -16,4 +16,3 @@ $Node.js https://nodejs.org.en/download
 $Node <NombrelDelEjercicio>
 
 ```
-
