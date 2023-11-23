@@ -38,20 +38,29 @@ var longestCommonPrefix = function(strs) {
     console.log(palabraMasPequenaDelArray)
 
     let prefijo = "" //Aqui almacenaremos la respuesta
-    for(let i = 0; i < palabraMasPequenaDelArray; i++) {
+//     for(let i = 0; i < palabraMasPequenaDelArray; i++) {
 
-console.log(i)
+// console.log(i)
 
-if(strs[0][i] === strs[0][i]) {
-console.log(strs[0][i])
-}
+// if(strs[0][i] === strs[0][i]) {
+// console.log(strs[0][i])
+// }
 
 
-    }
+//     }
+
+return strs.reduce((prev, next) => {
+    console.log(prev, next)
+        let i = 0;
+        while (prev[i] && next[i] && prev[i] === next[i]) i++;
+        console.log(`prev: ${prev[i]}`, `next: ${next[i]}`)
+        console.log(prev.slice(0, 1))
+        return prev.slice(0, i);
+    });
     
 
-    console.log(palabraMasPequenaDelArray)
+    // console.log(palabraMasPequenaDelArray)
     
 };
 
-longestCommonPrefix(strs)
+console.log(longestCommonPrefix(strs))
