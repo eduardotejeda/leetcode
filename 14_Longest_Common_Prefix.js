@@ -24,42 +24,22 @@ Constraints:
 strs[i] consists of only lowercase English letters.
 */
 
-strs = ["flower","flow","flight"]
+strs = ["flower","flow","floght", "flo"]
 
 var longestCommonPrefix = function(strs) {
 
     console.log(strs)
     if(!strs.length) {
         return ""
-    } // Si el array esta vacio devuelve "" como respuesta, finalizando al ejecucion del codigo.
-
-    let palabraMasPequenaDelArray = Math.min(...strs.map((str) => str.length )) //Buscamos la palabra mas pequena del array y la convertimos a un numero. Para poder limitar la busqueda del prefijo.
-
-    console.log(palabraMasPequenaDelArray)
-
-    let prefijo = "" //Aqui almacenaremos la respuesta
-//     for(let i = 0; i < palabraMasPequenaDelArray; i++) {
-
-// console.log(i)
-
-// if(strs[0][i] === strs[0][i]) {
-// console.log(strs[0][i])
-// }
+    } // Si el array esta vacio devuelve "" como respuesta, finalizando la ejecucion del codigo.
 
 
-//     }
-
-return strs.reduce((prev, next) => {
-    console.log(prev, next)
+    return strs.reduce((prev, next) => {    
         let i = 0;
         while (prev[i] && next[i] && prev[i] === next[i]) i++;
-        console.log(`prev: ${prev[i]}`, `next: ${next[i]}`)
-        console.log(prev.slice(0, 1))
         return prev.slice(0, i);
-    });
+    }); //El metedo reduce compara cada palabra del array. Una por una las coloca en las variables prev y next. El while es una mezcla de if con for loop que mientras la letra prev[i] y next[i] sea igualdad estricta prev[i] === next[i] sean verdaderos retorna la primera letra con el metodo slice(0,1).
     
-
-    // console.log(palabraMasPequenaDelArray)
     
 };
 
